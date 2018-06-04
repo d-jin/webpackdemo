@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.contain {
+    .head {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 0;
+        background: linear-gradient(to right, #f23f41, #e2233e);
+        i {
+            padding: 0 10px;
+            display: inline-block;
+            width: 26px;
+            height:26px;
+            background-size: 100%;
+        }
+        .leftIcon {
+            background: url('../../images/left.png') no-repeat center;
+        }
+        .rightIcon {
+            background: url('../../images/house.png') no-repeat center;
+        }
+    }
+}
