@@ -1,0 +1,42 @@
+.contain{
+    // padding-top: 50px;
+    .piebox {
+        display: flex;
+        height: 200px;
+        padding: 0 20px;
+        div:nth-child(1) {
+            width: 200px;
+            height: 200px !important;
+            padding-right: 20px;
+        }
+        .rightTxt {
+            padding: 26px 0;
+            .list {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                padding: 0 8px 8px;
+                .clr {
+                    width: 4px;
+                    height: 16px;
+                    border-radius:4px;
+                    margin-right:6px;
+                }
+                .txt {
+                    flex: 1;
+                    text-align: justify;
+                    text-align-last: justify;
+                    font-size: 16px;
+                    color: #666666;
+                }
+            }
+        }
+    }
+    .lineGradient {
+        height: 130px;
+        padding: 20px;
+    }
+    .Radar {
+        padding: 20px;
+    }
+}

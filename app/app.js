@@ -7,6 +7,7 @@ import {
 } from "redux"
 
 import reducers from './reducers'
+// import './public/ift.js'
 
 
 const store = createStore(

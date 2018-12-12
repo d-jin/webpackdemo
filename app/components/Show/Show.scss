@@ -1,0 +1,19 @@
+.contain {
+    // padding-top: 50px;
+    .line{
+        position: fixed;
+        left: 0;
+        top:54px;
+        // margin-top: 50px;
+        height: 4px;
+        background:#4cbc00;
+    }
+    p {
+        // text-indent: 30px;
+        padding: 10px 0 0 20px;
+        font-size: 14px;
+        span {
+            color:#4ccad8;
+        }
+    }
+}

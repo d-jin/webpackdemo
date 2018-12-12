@@ -1,8 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import styles from './Header.scss'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-console.log(styles)
 
 class Header extends Component {
     constructor(props) {
@@ -10,20 +9,37 @@ class Header extends Component {
     }
 
     componentWillMount() {
+        this.back = this.back.bind(this);
+        this.goHome = this.goHome.bind(this);
 
+    }
+
+    //返回按钮
+    back() {
+        this.props.history.go(-1);
+    }
+    
+    //回到主页
+    goHome(){
+        this.props.history.replace('/');
     }
 
     render() {
         const { header } = this.props;
-        console.log(header)
-        // console.log(header && header.title);
         return (
             <div className={styles.contain} >
+                <div className={styles.wrap}>
                 <div className={styles.head}>
-                    <i className={styles.leftIcon}></i>
                     <div className={styles.title}>{header.title}</div>
-                    <i className={styles.rightIcon}></i>
+                    {
+                        header.back ? <i className={styles.leftIcon} onClick={this.back}></i> : null
+                    }
+                    {
+                        header.home ? <i className={styles.rightIcon} onClick={this.goHome}></i> : null
+                    }
                 </div>
+                </div>
+                
             </div>
         )
     }

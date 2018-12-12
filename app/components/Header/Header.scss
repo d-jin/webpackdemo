@@ -2,24 +2,53 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .contain {
-    .head {
-        display: flex;
-        justify-content: space-between;
-        padding: 14px 0;
-        background: linear-gradient(to right, #f23f41, #e2233e);
-        i {
-            padding: 0 10px;
-            display: inline-block;
-            width: 26px;
-            height:26px;
-            background-size: 100%;
-        }
-        .leftIcon {
-            background: url('../../images/left.png') no-repeat center;
-        }
-        .rightIcon {
-            background: url('../../images/house.png') no-repeat center;
+    padding-bottom: 50px;
+
+    .wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+
+        .head {
+
+            padding: 14px 0;
+            background: linear-gradient(to right, #f23f41, #e2233e);
+
+            i {
+                padding: 0 10px;
+                display: inline-block;
+                width: 26px;
+                height: 26px;
+                background-size: 100%;
+            }
+
+            .title {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 18px;
+                color: #ffffff;
+                padding: 0 70px;
+                text-align: center;
+            }
+
+            .leftIcon {
+                position: absolute;
+                left: 0;
+                top: 14px;
+                background: url('../../images/left.png') no-repeat center;
+            }
+
+            .rightIcon {
+                position: absolute;
+                right: 0;
+                top: 14px;
+                background: url('../../images/house.png') no-repeat center;
+            }
         }
     }
 }

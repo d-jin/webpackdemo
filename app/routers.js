@@ -1,11 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './components/Home/Home'
-import About from './components/About/About'
-import Suggest from './components/Suggest/Suggest'
+import Echarts from './components/Echarts/Echarts'
+import Collapse from './components/Collapse/Collapse'
 import Header from './components/Header/Header'
-// import Detail from './components/Detail/Detail'
-// const Home = () => import('./components/Home/Home')
+import RefsAndDom from './components/RefsAndDom/RefsAndDom'
+import Show from './components/Show/Show'
+import MenuList from './components/MenuList/MenuList'
 
 const RouteConfig = () => (
     <Router>
@@ -13,10 +14,11 @@ const RouteConfig = () => (
             <Header />
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/about' component={About} />
-                <Route path='/suggest' component={Suggest} />
-                {/* <Route path='/head' component={Head} /> */}
-                {/* <Route  path='/detail' component={Detail} /> */}
+                <Route path='/echarts' component={Echarts} />
+                <Route path='/collapse' component={Collapse} />
+                <Route path='/refsAndDom' component={RefsAndDom} />
+                <Route  path='/show' component={Show} />
+                <Route  path='/menuList' component={MenuList} />
             </Switch>
         </React.Fragment>
 

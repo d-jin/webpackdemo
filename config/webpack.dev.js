@@ -3,6 +3,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const dllName = require('./dll/name.json')
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // const extractSass = new ExtractTextPlugin({
 //     filename: "[name].[contenthash].css"
@@ -27,6 +28,7 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             module: true,
+                            localIdentName: "[name]-[local]_[hash:8]"
                             
                         }
                     },
@@ -77,7 +79,8 @@ module.exports = {
         new webpack.DllReferencePlugin({
             context: path.resolve("./dll"),
             manifest: require("./dll/vendor-manifest.json")
-        })
+        }),
+        new OpenBrowserPlugin({ url: 'http://localhost:9999' })
     ],
     devServer: {
         port: 9999,
